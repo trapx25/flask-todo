@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Edit{% endblock %}
+{% block content %}
+  <h1>Todo List</h1>
+  <form action="" method="post">
+    <p>
+      <h4>Edit task</h4>
+      <div class="form-inline">
+        <div class="form-group">
+          <input type="text" name="task" value="{{ task.1 }}" class="form-control" />
+          <input type="submit" value="Save" class="btn btn-default btn-md" />
+        </div>
+      </div>
+    </p>
+  </form>
+  <a href="{{ url_for('index') }}">Go back</a>
+{% endblock %}

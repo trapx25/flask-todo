@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <h1>Todo List</h1>
+  <form action="" method="post">
+    <p>
+      <h4>Enter a new task</h4>
+      <div class="form-inline">
+        <div class="form-group">
+          <input type="text" name="task" class="form-control" />
+          <input type="submit" value="Add" class="btn btn-default btn-md" />
+        </div>
+      </div>
+    </p>
+  </form>
+  <ul>
+  {% for task in tasks %}
+    <li>{{ task.1 }} <a href="/edit/{{ task.0 }}">Edit</a> <a href="/delete/{{ task.0 }}">Delete</a></li>
+  {% endfor %}
+  </ul>
+{% endblock %}
